@@ -3,7 +3,7 @@
 <% if user_signed_in? %>
   <%= current_user.name %>
   <%= current_user.email %>
-  <a href="#">記録する</a>
+  <%= link_to "記録する", new_book_path %>
   <a href="#">本ごとに見る</a>
   <a href="#">内容ごとに見る</a>
   <a href="#">ユーザー編集</a>

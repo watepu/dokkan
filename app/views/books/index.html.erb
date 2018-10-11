@@ -1,0 +1,11 @@
+<h2>本ごとの記録</h2>
+
+<% @books.each do |book| %>
+<div>
+  <%= book.title %>
+  <%= book.headline %>
+  <%= book.content %>
+</div>
+<% end %>
+
+<%= link_to "記録する", new_book_path %>
