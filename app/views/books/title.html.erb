@@ -1,0 +1,9 @@
+<h2><%= @title %>のページ</h2>
+
+<% @books.where(title: @title).each do |book| %>
+<div>
+  <%= book.headline %>
+  <%= book.content %>
+</div>
+
+<% end %>

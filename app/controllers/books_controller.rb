@@ -17,6 +17,16 @@ class BooksController < ApplicationController
     @books = Book.all
   end
 
+  def title
+    @title = params[:title]
+    @books = Book.all
+  end
+
+  def headline
+    @headline = params[:headline]
+    @books = Book.all
+  end
+
   private
 
   def book_params
