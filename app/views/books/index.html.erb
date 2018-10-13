@@ -1,5 +1,12 @@
 <h2>記録一覧</h2>
 
+<%= search_form_for @search do |f| %>
+  <%= f.label :content_cont, "内容を検索します" %>
+  <%= f.search_field :content_cont %>
+
+
+    <%= f.submit "検索" %>
+<% end %>
 
 <% @books.each do |book| %>
 <div>
@@ -17,6 +24,7 @@
 <div>
 <% @books.where(user_id: current_user.id).pluck(:title).uniq.each do |book| %>
 <!-- pluckが配列を取得、uniqが重複を削除 -->
+<!-- 先にログインしたidで投稿した記録を絞り出し、その後、重複を削除する。逆だと配列が本のタイトルだけになり、user_idで抜き出せない -->
 <div>
  <%= link_to book, "/books/title/#{book}" %>
 </div>

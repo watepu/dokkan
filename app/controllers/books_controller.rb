@@ -15,7 +15,8 @@ class BooksController < ApplicationController
   end
 
   def index
-    @books = Book.all
+    @search = Book.ransack(params[:q])
+    @books = @search.result
   end
 
   def title
