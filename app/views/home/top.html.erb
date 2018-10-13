@@ -4,9 +4,8 @@
   <%= current_user.name %>
   <%= current_user.email %>
   <%= link_to "記録する", new_book_path %>
-  <a href="#">本ごとに見る</a>
-  <a href="#">内容ごとに見る</a>
-  <a href="#">ユーザー編集</a>
+  <%= link_to "記録一覧", books_path %>
+  <%= link_to "ユーザー編集", edit_user_registration_path %>
   <%= link_to "ログアウト",destroy_user_session_path, method: :delete %>
 <% else %>
   <%= link_to "新規登録", new_user_registration_path %>
