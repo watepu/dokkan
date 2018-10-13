@@ -1,6 +1,6 @@
 <h2><%= @headline %>のページ</h2>
 
-<% @books.where(headline: @headline).each do |book| %>
+<% @books.where(user_id: current_user.id).where(headline: @headline).each do |book| %>
 <div>
   <%= book.content %>
 </div>

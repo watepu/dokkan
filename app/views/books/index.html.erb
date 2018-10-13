@@ -3,17 +3,19 @@
 
 <% @books.each do |book| %>
 <div>
+  <% if book.user_id == current_user.id %>
   <%= book.title %>
   <%= book.headline %>
   <%= book.content %>
   <%= link_to "編集", edit_book_path(book.id) %>
   <%= link_to "削除", book_path(book.id),method: :delete,data: {confirm: "本当に削除していいですか？"} %>
+  <% end %>
 </div>
 <% end %>
 <p>--------------------------</p>
 <p>本メニュー</p>
 <div>
-<% @books.pluck(:title).uniq.each do |book| %>
+<% @books.where(user_id: current_user.id).pluck(:title).uniq.each do |book| %>
 <!-- pluckが配列を取得、uniqが重複を削除 -->
 <div>
  <%= link_to book, "/books/title/#{book}" %>
@@ -24,7 +26,7 @@
 <p>--------------------------</p>
 <p>見出しメニュー</p>
 <div>
-<% @books.pluck(:headline).uniq.each do |book| %>
+<% @books.where(user_id: current_user.id).pluck(:headline).uniq.each do |book| %>
 <div>
  <%= link_to book, "/books/headline/#{book}" %>
 </div>
