@@ -1,6 +1,7 @@
 ja:
   activerecord:
     models:
+      book: "本"
       user: "ユーザー"
     attributes:
       contact:
@@ -17,3 +18,7 @@ ja:
         password_confirmation: "確認用パスワード"
         remember_me: "ログインを記憶"
         image: "アイコンを追加"
+      book:
+        title: "タイトル"
+        headline: "見出し"
+        content: "内容"
