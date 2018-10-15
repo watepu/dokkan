@@ -51,6 +51,10 @@ class BooksController < ApplicationController
     redirect_to books_path
   end
 
+  def confirm
+    @book = Book.new(book_params)
+  end
+
   private
 
   def book_params
