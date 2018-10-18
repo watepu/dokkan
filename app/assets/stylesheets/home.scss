@@ -86,6 +86,11 @@ footer p{
   color: #fff;
 }
 
+.top-menu img{
+  max-width: 50px;
+  height: auto;
+}
+
 // ページ上部ボタン
 .top-btn{
   display: inline-block;
@@ -98,8 +103,131 @@ footer p{
   color: black;
 }
 
-// 新規登録
+// 各種ボタン
+.new-btn{
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background-color: white;
+  border-left: solid 6px #ff7c5c;
+  color:#ff7c5c;
+  font-weight: bold;
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+}
 
+.new-btn:hover{
+  text-decoration: none;
+  color: #ff7c5c;
+}
+
+.new-btn:active{
+  transform: translateY(2px);
+  box-shadow: inset 0 0 2px rgba(128,128,128,0.1);
+}
+
+.index-btn{
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background-color: white;
+  border-left: solid 6px #ffd700;
+  color:#ffd700;
+  font-weight: bold;
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+}
+
+.index-btn:hover{
+  text-decoration: none;
+  color: #ffd700;
+}
+
+.index-btn:active{
+  transform: translateY(2px);
+  box-shadow: inset 0 0 2px rgba(128,128,128,0.1);
+}
+
+.user-btn{
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background-color: white;
+  border-left: solid 6px #32cd32;
+  color:#32cd32;
+  font-weight: bold;
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+}
+
+.user-btn:hover{
+  text-decoration: none;
+  color: #32cd32;
+}
+
+.user-btn:active{
+  transform: translateY(2px);
+  box-shadow: inset 0 0 2px rgba(128,128,128,0.1);
+}
+
+.logout-btn{
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background-color: white;
+  border-left: solid 6px #00ced1;
+  color:#00ced1;
+  font-weight: bold;
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+}
+
+.logout-btn:hover{
+  text-decoration: none;
+  color: #00ced1;
+}
+
+.logout-btn:active{
+  transform: translateY(2px);
+  box-shadow: inset 0 0 2px rgba(128,128,128,0.1);
+}
+
+.user-info{
+  text-align: center;
+}
+
+.user-info a{
+  margin-right: 20px;
+}
+
+// 新規登録、ログイン
+.page-title{
+  background-color: #b0c4de;
+  margin-top: 0;
+}
+
+.field{
+  text-align: center;
+  margin-top: 30px;
+}
+
+#user_image{
+  margin:0 auto;
+}
+
+.actions{
+  text-align: center;
+  margin: 30px auto;
+}
+
+.login-menu{
+  text-align: center;
+}
+
+// フラッシュメッセージ
+.notice{
+  font-size: 2rem;
+  background-color: #90ee90;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
 
 // pcサイト
 @media(min-width:820px){
