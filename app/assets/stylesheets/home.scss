@@ -65,7 +65,7 @@ p{
   border-radius: 10px;
   border: solid 1px #e3e3e3;
   box-sizing: border-box;
-  height: 400px;
+  height: 200px;
   width: 300px;
   padding-top: 20px;
   margin: 20px auto;
@@ -224,6 +224,14 @@ footer p{
 .notice{
   font-size: 2rem;
   background-color: #90ee90;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.danger{
+  font-size: 2rem;
+  background-color: #dc143c;
   color: white;
   font-weight: bold;
   text-align: center;

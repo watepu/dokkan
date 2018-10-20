@@ -1,4 +1,4 @@
-<h2>記録画面</h2>
+<h2 class="page-title">記録画面</h2>
 
 
 <%= form_with(model: @book, local: true, url: confirm_books_path) do |f| %>
@@ -14,14 +14,26 @@
     </div>
   <% end %>
 
+<div class="book-form">
+<div class="book-label">
   <%= f.label :title %>
+</div>
+<div>
   <%= f.text_field :title %>
-
+</div>
+<div class="book-label">
   <%= f.label :headline %>
+</div>
+<div>
   <%= f.text_field :headline %>
-
+</div>
+<div class="book-label">
   <%= f.label :content %>
-  <%= f.text_area :content %>
+</div>
+<div class="book-field">
+  <%= f.text_area :content, :size => "60x15" %>
+</div>
 
-  <%= f.submit "記録する" %>
+  <%= f.submit "記録する", :class => "new-btn" %>
 <% end %>
+</div>

@@ -1,1 +1,75 @@
+.book-form{
+  text-align: center;
+}
 
+.book-label{
+  margin-top: 20px;
+}
+
+.book-field{
+  margin-bottom: 20px;
+}
+
+h3{
+  text-align: center;
+  background-color: #ffdead;
+}
+
+.book-index{
+  text-align: center;
+}
+
+// index画面
+.book_search{
+  text-align: center;
+}
+
+table{
+  margin: 0 auto;
+}
+
+th{
+  text-align: center;
+  padding: 10px;
+  border: solid 1px black;
+  background-color: #ffffe5;
+  color: #ff9800;
+}
+
+td{
+  text-align: center;
+  padding: 10px;
+  border: solid 1px black;
+}
+
+.book-title{
+  margin: 20px;
+}
+
+.headline-title{
+  margin: 20px;
+}
+
+// 本ごとのページ
+.title-detail{
+  text-align: center;
+  margin: 20px;
+}
+
+.book-headline{
+  font-weight: bold;
+  background-color: #ffefd5;
+  padding: 10px;
+}
+
+.book-content{
+  background-color: #afeeee;
+  padding: 10px;
+}
+
+// 見出しごとのページ
+.book-name{
+  font-weight: bold;
+  background-color: #ffefd5;
+  padding: 10px;
+}

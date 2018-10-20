@@ -1,29 +1,27 @@
-<h2>以下の内容で投稿します</h2>
+<h2 class="page-title">以下の内容で投稿します</h2>
 
+<div class="book-form">
 <%= form_with(model: @book, local: true) do |f| %>
-  <div>
+<div class="book-label">
   <%= f.label :title %>
-  </div>
-  <div>
+</div>
+<div>
   <%= f.text_field :title %>
-  </div>
-
-  <div>
+</div>
+<div class="book-label">
   <%= f.label :headline %>
-  </div>
-  <div>
+</div>
+<div>
   <%= f.text_field :headline %>
-  </div>
-
-  <div>
+</div>
+<div class="book-label">
   <%= f.label :content %>
-  </div>
-  <div class="input_field">
-  <%= f.text_area :content %>
-  </div>
+</div>
+<div class="book-field">
+  <%= f.text_area :content, :size => "60x15" %>
+</div>
 
-
-
-  <%= f.submit "投稿する", :class => "submit_btn" %>
+  <%= f.submit "記録する", :class => "new-btn" %>
 
 <% end %>
+</div>

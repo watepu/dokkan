@@ -1,7 +1,17 @@
-<h2><%= @headline %>のページ</h2>
+<h2 class="page-title"><%= @headline %>のページ</h2>
 
+<div class="title-detail">
 <% @books.where(user_id: current_user.id).where(headline: @headline).each do |book| %>
-<div>
+<div class="book-name">
+  <%= book.title %>
+</div>
+<div class="book-content">
   <%= book.content %>
 </div>
 <% end %>
+</div>
+
+<div class="user-info">
+<%= link_to "記録する", new_book_path, class: "new-btn" %>
+<%= link_to "記録一覧", books_path, class: "index-btn" %>
+</div>
