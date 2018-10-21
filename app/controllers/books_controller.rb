@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
   before_action :ensure_correct_user, {only: [:edit, :update, :destroy]}
-  
+  before_action :set_book, {only: [:edit, :update, :destroy]}
+
   def new
     @book = Book.new
   end
@@ -31,11 +32,9 @@ class BooksController < ApplicationController
   end
 
   def edit
-    @book = Book.find(params[:id])
   end
 
   def update
-    @book = Book.find(params[:id])
     if @book.update(book_params)
       flash[:notice] = '編集しました'
       redirect_to books_path
@@ -46,7 +45,6 @@ class BooksController < ApplicationController
   end
 
   def destroy
-    @book = Book.find(params[:id])
     @book.destroy
     flash[:notice] = '削除しました'
     redirect_to books_path
@@ -68,5 +66,9 @@ class BooksController < ApplicationController
       flash[:danger] = "権限がありません"
       redirect_to books_path
     end
+  end
+
+  def set_book
+    @book = Book.find(params[:id])
   end
 end
