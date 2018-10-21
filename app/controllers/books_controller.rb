@@ -52,6 +52,8 @@ class BooksController < ApplicationController
 
   def confirm
     @book = Book.new(book_params)
+    @book.user_id = current_user.id
+    render :new if @book.invalid?
   end
 
   private
