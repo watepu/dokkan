@@ -23,4 +23,5 @@ http://arcane-inlet-49890.herokuapp.com/
 * 検索機能（ransack使用）
 * 画像アップロード機能（carrierwave、mini_magick使用）
 * 辞書機能
+* 一対多アソシエーション
 * 記録をすると自動的に、本ごと、見出しごとのメニューが重複無しで作成される機能
