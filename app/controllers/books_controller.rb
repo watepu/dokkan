@@ -1,4 +1,6 @@
 class BooksController < ApplicationController
+  before_action :ensure_correct_user, {only: [:edit, :update, :destroy]}
+  
   def new
     @book = Book.new
   end
@@ -58,5 +60,13 @@ class BooksController < ApplicationController
 
   def book_params
     params.require(:book).permit(:title, :headline, :content)
+  end
+
+  def ensure_correct_user
+    @book = Book.find(params[:id])
+    if current_user.id != @book.user_id
+      flash[:danger] = "権限がありません"
+      redirect_to books_path
+    end
   end
 end

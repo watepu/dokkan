@@ -1,8 +1,8 @@
 <h2 class="page-title">記録一覧</h2>
 
 <%= search_form_for @search do |f| %>
-  <%= f.label :content_cont, "内容を検索します" %>
-  <%= f.search_field :content_cont %>
+  <%= f.label :title_or_headline_or_content_cont, "検索する場合はこちら" %>
+  <%= f.search_field :title_or_headline_or_content_cont %>
   <%= f.submit "検索" %>
 <% end %>
 
