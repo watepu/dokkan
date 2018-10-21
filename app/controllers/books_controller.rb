@@ -1,5 +1,4 @@
 class BooksController < ApplicationController
-
   def new
     @book = Book.new
   end
@@ -36,10 +35,10 @@ class BooksController < ApplicationController
   def update
     @book = Book.find(params[:id])
     if @book.update(book_params)
-      flash[:notice] = "編集しました"
+      flash[:notice] = '編集しました'
       redirect_to books_path
     else
-      flash[:danger] = "編集に失敗しました"
+      flash[:danger] = '編集に失敗しました'
       render 'edit'
     end
   end
@@ -47,7 +46,7 @@ class BooksController < ApplicationController
   def destroy
     @book = Book.find(params[:id])
     @book.destroy
-    flash[:notice] = "削除しました"
+    flash[:notice] = '削除しました'
     redirect_to books_path
   end
 
@@ -60,6 +59,4 @@ class BooksController < ApplicationController
   def book_params
     params.require(:book).permit(:title, :headline, :content)
   end
-
-
 end
