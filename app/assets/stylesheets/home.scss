@@ -260,6 +260,12 @@ footer p{
   text-align: center;
 }
 
+// ユーザー編集画面
+.field img{
+  max-width: 200px;
+  height: auto;
+}
+
 // pcサイト
 @media(min-width:820px){
   .fruid-box{
