@@ -4,7 +4,7 @@
 <%= form_with(model: @book, local: true, url: confirm_books_path) do |f| %>
 
   <% if @book.errors.any? %>
-    <div>
+    <div class="error-messages">
       <h3><%= @book.errors.count %>件のエラーがあります</h3>
       <ul>
         <% @book.errors.full_messages.each do |msg| %>
