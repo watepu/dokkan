@@ -1,24 +1,25 @@
 <h2 class="page-title">編集画面</h2>
 
 <%= form_with(model: @book, local: true) do |f| %>
-<div class="book-form">
-<div class="book-label">
-  <%= f.label :title %>
-</div>
-<div>
-  <%= f.text_field :title %>
-</div>
-<div class="book-label">
-  <%= f.label :headline %>
-</div>
-<div>
-  <%= f.text_field :headline %>
-</div>
-<div class="book-label">
-  <%= f.label :content %>
-</div>
-<div class="book-field">
-  <%= f.text_area :content, :size => "60x15" %>
-</div>
+  <div class="book-form">
+    <div class="book-label">
+      <%= f.label :title %>
+    </div>
+    <div>
+      <%= f.text_field :title %>
+    </div>
+    <div class="book-label">
+      <%= f.label :headline %>
+    </div>
+    <div>
+      <%= f.text_field :headline %>
+    </div>
+    <div class="book-label">
+      <%= f.label :content %>
+    </div>
+    <div class="book-field">
+      <%= f.text_area :content, :size => "60x15" %>
+    </div>
+  </div>
   <%= f.submit "記録する", :class => "new-btn" %>
 <% end %>

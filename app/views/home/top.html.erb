@@ -1,43 +1,43 @@
 <div class="container">
-<div class="top-main">
-</div>
+  <div class="top-main">
+  </div>
 
 <div class="user-info">
-<% if user_signed_in? %>
-  <%= link_to "記録する", new_book_path, class: "new-btn" %>
-  <%= link_to "記録一覧", books_path, class: "index-btn" %>
-  <%= link_to "ユーザー編集", edit_user_registration_path, class: "user-btn" %>
-  <%= link_to "ログアウト",destroy_user_session_path, method: :delete, class: "logout-btn" %>
-<% end %>
+  <% if user_signed_in? %>
+    <%= link_to "記録する", new_book_path, class: "new-btn" %>
+    <%= link_to "記録一覧", books_path, class: "index-btn" %>
+    <%= link_to "ユーザー編集", edit_user_registration_path, class: "user-btn" %>
+    <%= link_to "ログアウト",destroy_user_session_path, method: :delete, class: "logout-btn" %>
+  <% end %>
 </div>
 
 <div class="functions">
-<h2>Dokkanの主な機能</h2>
-<p>本の感想を記録すると、</p>
-<p>「本ごと」「見出しごと」に記録を確認することができます</p>
+  <h2>Dokkanの主な機能</h2>
+    <p>本の感想を記録すると、</p>
+    <p>「本ごと」「見出しごと」に記録を確認することができます</p>
 
-<ul class="fruid-box">
-  <li>
-    <h4>1</h4>
-    <h4>見出しをつけて内容を記録します</h4>
-    <p>見出しをつけることで、</p>
-    <p>後で見出しごとに確認できます。</p>
-  </li>
+  <ul class="fruid-box">
+    <li>
+      <h4>1</h4>
+      <h4>見出しをつけて内容を記録します</h4>
+      <p>見出しをつけることで、</p>
+      <p>後で見出しごとに確認できます。</p>
+    </li>
 
-  <li>
-    <h4>2</h4>
-    <h4>メニューが作られます</h4>
-    <p>記録すると</p>
-    <p>自動でメニューが作られます。</p>
-  </li>
+    <li>
+      <h4>2</h4>
+      <h4>メニューが作られます</h4>
+      <p>記録すると</p>
+      <p>自動でメニューが作られます。</p>
+    </li>
 
-  <li>
-    <h4>3</h4>
-    <h4>まとめられた記録を確認できます</h4>
-    <p>それぞれのメニューをクリックすると</p>
-    <p>まとめられた記録を確認できます。</p>
-  </li>
-</ul>
+    <li>
+      <h4>3</h4>
+      <h4>まとめられた記録を確認できます</h4>
+      <p>それぞれのメニューをクリックすると</p>
+      <p>まとめられた記録を確認できます。</p>
+    </li>
+  </ul>
 </div>
 
 <footer>

@@ -3,54 +3,54 @@
 <%= search_form_for @search do |f| %>
   <%= f.label :content_cont, "内容を検索します" %>
   <%= f.search_field :content_cont %>
-
-
-    <%= f.submit "検索" %>
+  <%= f.submit "検索" %>
 <% end %>
 
 <h3>記録したもの一覧</h3>
-<div class="book-index">
-<table>
-  <th>タイトル</th>
-  <th>見出し</th>
-  <th>内容</th>
-  <th>編集</th>
-  <th>削除</th>
-<% @books.each do |book| %>
-  <% if book.user_id == current_user.id %>
-    <tr>
-  <td><%= book.title %></td>
-  <td><%= book.headline %></td>
-  <td><%= book.content.truncate(10) %></td>
-  <td><%= link_to "編集", edit_book_path(book.id) %></td>
-  <td><%= link_to "削除", book_path(book.id),method: :delete,data: {confirm: "本当に削除していいですか？"} %></td>
-  <% end %>
-</tr>
-</div>
-<% end %>
-</table>
+  <div class="book-index">
+    <table>
+      <tr>
+        <th>タイトル</th>
+        <th>見出し</th>
+        <th>内容</th>
+        <th>編集</th>
+        <th>削除</th>
+      </tr>
+    <% @books.each do |book| %>
+      <% if book.user_id == current_user.id %>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= book.headline %></td>
+        <td><%= book.content.truncate(10) %></td>
+        <td><%= link_to "編集", edit_book_path(book.id) %></td>
+        <td><%= link_to "削除", book_path(book.id),method: :delete,data: {confirm: "本当に削除していいですか？"} %></td>
+      <% end %>
+      </tr>
+  </div>
+    <% end %>
+    </table>
 
 <h3>本ごとにみる</h3>
-<div class="book-title">
-<% @books.where(user_id: current_user.id).pluck(:title).uniq.each do |book| %>
+  <div class="book-title">
+    <% @books.where(user_id: current_user.id).pluck(:title).uniq.each do |book| %>
 <!-- pluckが配列を取得、uniqが重複を削除 -->
 <!-- 先にログインしたidで投稿した記録を絞り出し、その後、重複を削除する。逆だと配列が本のタイトルだけになり、user_idで抜き出せない -->
-<div>
- <%= link_to book, "/books/title/#{book}" %>
-</div>
-<% end %>
-</div>
+      <div>
+        <%= link_to book, "/books/title/#{book}" %>
+      </div>
+    <% end %>
+  </div>
 
 <h3>内容ごとにみる</h3>
-<div class="headline-title">
-<% @books.where(user_id: current_user.id).pluck(:headline).uniq.each do |book| %>
-<div>
- <%= link_to book, "/books/headline/#{book}" %>
-</div>
-<% end %>
-</div>
+  <div class="headline-title">
+    <% @books.where(user_id: current_user.id).pluck(:headline).uniq.each do |book| %>
+      <div>
+       <%= link_to book, "/books/headline/#{book}" %>
+      </div>
+    <% end %>
+  </div>
 
 
 <div>
-<%= link_to "記録する", new_book_path, class: "new-btn" %>
+  <%= link_to "記録する", new_book_path, class: "new-btn" %>
 </div>

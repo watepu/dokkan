@@ -1,22 +1,27 @@
 <h2 class="page-title">以下の内容で投稿します</h2>
 
 <div class="book-form">
-<%= form_with(model: @book, local: true) do |f| %>
+  <%= form_with(model: @book, local: true) do |f| %>
 <div class="book-label">
   <%= f.label :title %>
 </div>
+
 <div>
   <%= f.text_field :title %>
 </div>
+
 <div class="book-label">
   <%= f.label :headline %>
 </div>
+
 <div>
   <%= f.text_field :headline %>
 </div>
+
 <div class="book-label">
   <%= f.label :content %>
 </div>
+
 <div class="book-field">
   <%= f.text_area :content, :size => "60x15" %>
 </div>

@@ -10,15 +10,15 @@
 
   <body>
     <div class="top-menu">
-    <%= link_to "トップへ", "/", class: "top-btn" %>
-    <% if user_signed_in? %>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "top-btn" %>
-      <%= image_tag(current_user.image.url) if current_user.image.url %>
-      <%= current_user.name %>
-    <% else %>
-      <%= link_to "新規登録", new_user_registration_path, class: "top-btn" %>
-      <%= link_to "ログイン", new_user_session_path, class: "top-btn" %>
-    <% end %>
+      <%= link_to "トップへ", "/", class: "top-btn" %>
+      <% if user_signed_in? %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "top-btn" %>
+        <%= image_tag(current_user.image.url) if current_user.image.url %>
+        <%= current_user.name %>
+      <% else %>
+        <%= link_to "新規登録", new_user_registration_path, class: "top-btn" %>
+        <%= link_to "ログイン", new_user_session_path, class: "top-btn" %>
+      <% end %>
   </div>
 
     <% flash.each do |key,value| %>
