@@ -249,6 +249,12 @@ footer p{
   text-align: center;
 }
 
+// エラーメッセージ
+#error_explanation ul{
+  list-style: none;
+  text-align: center;
+}
+
 // pcサイト
 @media(min-width:820px){
   .fruid-box{
