@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
 
-  get 'books/title/:title' => 'books#title'
-  get 'books/headline/:headline' => 'books#headline'
+  get 'books/title/:title', to: 'books#title'
+  get 'books/headline/:headline', to: 'books#headline'
   resources :books do
     collection do
       post :confirm
