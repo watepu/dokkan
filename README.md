@@ -1,24 +1,25 @@
-# README
+# Dokkan
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* 概要
+本の記録を効率化したくて作成したアプリです。
+見出しと一緒に内容を記録することで、「本ごと」「内容ごと」に記録を確認出来ます。
 
-Things you may want to cover:
+* URL
+http://arcane-inlet-49890.herokuapp.com/
 
-* Ruby version
+* 開発環境
+・ Ruby 2.5.0
+・ Rails 5.1.6
+・ PostgreSQL 10.5
 
-* System dependencies
+* 使い方
+１：新規登録からアカウントを作成
+２：ログインするとメニューが出てきますので「記録する」を選択
+３：「記録一覧」画面から、「本ごと」「内容ごと」の記録を確認出来ます。
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* 機能一覧
+・ ログイン機能（devise使用）
+・ CRUD機能
+・ 検索機能（ransack使用）
+・ 画像アップロード機能（carrierwave、mini_magick使用）
+・ 記録をすると自動的に、本ごと、見出しごとのメニューが重複無しで作成される機能
