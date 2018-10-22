@@ -30,7 +30,7 @@
     <% end %>
     </table>
 
-<h3>本ごとにみる</h3>
+<h3>タイトルごとにみる</h3>
   <div class="book-title">
     <% @books.where(user_id: current_user.id).pluck(:title).uniq.each do |book| %>
 <!-- pluckが配列を取得、uniqが重複を削除 -->
@@ -41,7 +41,7 @@
     <% end %>
   </div>
 
-<h3>内容ごとにみる</h3>
+<h3>見出しごとにみる</h3>
   <div class="headline-title">
     <% @books.where(user_id: current_user.id).pluck(:headline).uniq.each do |book| %>
       <div>
