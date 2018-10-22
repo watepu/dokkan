@@ -2,7 +2,7 @@
   title = Faker::Book.title
   headline = Faker::Book.genre
   content = Faker::StarWars.quote
-  user_id = Faker::Number.between(1, 10)
+  user_id = Faker::Number.between(1, 8)
 
   Book.create(
     title: title,
