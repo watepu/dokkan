@@ -36,18 +36,16 @@ class BooksController < ApplicationController
 
   def update
     if @book.update(book_params)
-      flash[:notice] = '編集しました'
-      redirect_to books_path
+      redirect_to books_path, notice: '編集しました'
     else
-      flash[:danger] = '編集に失敗しました'
+      flash[:alert] = '編集に失敗しました'
       render 'edit'
     end
   end
 
   def destroy
     @book.destroy
-    flash[:notice] = '削除しました'
-    redirect_to books_path
+    redirect_to books_path, notice: '削除しました'
   end
 
   def confirm
@@ -65,8 +63,7 @@ class BooksController < ApplicationController
   def ensure_correct_user
     @book = Book.find(params[:id])
     if current_user.id != @book.user_id
-      flash[:danger] = "権限がありません"
-      redirect_to books_path
+      redirect_to books_path, alert: '権限がありません'
     end
   end
 
