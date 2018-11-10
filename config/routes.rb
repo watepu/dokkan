@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root 'home#top'
   devise_for :users
-  mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
 
   get 'books/title/:title', to: 'books#title'
   get 'books/headline/:headline', to: 'books#headline'
@@ -11,5 +10,6 @@ Rails.application.routes.draw do
     end
   end
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
+
 end
