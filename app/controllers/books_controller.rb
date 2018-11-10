@@ -29,6 +29,7 @@ class BooksController < ApplicationController
   def headline
     @headline = params[:headline]
     @books = Book.all
+    @table = @books.where(user_id: current_user.id).where(headline: @headline)
   end
 
   def edit

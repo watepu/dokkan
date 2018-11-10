@@ -1,12 +1,12 @@
 <h2 class="page-title"><%= @headline %>のページ</h2>
 
 <div class="title-detail">
-  <% @books.where(user_id: current_user.id).where(headline: @headline).each do |book| %>
+  <% @table.each do |table| %>
     <div class="book-name">
-      <%= book.title %>
+      <%= table.title %>
     </div>
     <div class="book-content">
-      <%= book.content %>
+      <%= table.content %>
     </div>
 <% end %>
 </div>
