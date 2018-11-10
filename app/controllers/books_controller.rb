@@ -24,6 +24,7 @@ class BooksController < ApplicationController
   def title
     @title = params[:title]
     @books = Book.all
+    @table = @books.where(user_id: current_user.id).where(title: @title)
   end
 
   def headline
