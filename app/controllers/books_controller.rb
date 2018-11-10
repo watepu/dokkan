@@ -18,8 +18,8 @@ class BooksController < ApplicationController
   def index
     @search = Book.ransack(params[:q])
     @books = @search.result
-    @title_menu = @books.where(user_id: current_user.id).pluck(:title).uniq
-    @headline_menu = @books.where(user_id: current_user.id).pluck(:headline).uniq
+    @title_menu = current_user.books.pluck(:title).uniq
+    @headline_menu = current_user.books.pluck(:headline).uniq
   end
 
   def title
