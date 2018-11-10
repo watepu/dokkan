@@ -25,13 +25,13 @@ class BooksController < ApplicationController
   def title
     @title = params[:title]
     @books = Book.all
-    @table = @books.where(user_id: current_user.id).where(title: @title)
+    @table = current_user.books.where(title: @title)
   end
 
   def headline
     @headline = params[:headline]
     @books = Book.all
-    @table = @books.where(user_id: current_user.id).where(headline: @headline)
+    @table = current_user.books.where(headline: @headline)
   end
 
   def edit
