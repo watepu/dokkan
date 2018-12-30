@@ -26,6 +26,8 @@ h3{
 
 table{
   margin: 0 auto;
+  border-spacing: 0px;
+  border-collapse: collapse;
 }
 
 th{
@@ -72,4 +74,9 @@ td{
   font-weight: bold;
   background-color: #ffefd5;
   padding: 10px;
+}
+
+// new
+input{
+  cursor: pointer;
 }
