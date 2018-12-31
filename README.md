@@ -1,8 +1,9 @@
 # Dokkan
 
 ## 概要
-本の記録を効率化したくて作成したアプリです。
-見出しと一緒に内容を記録することで、「本ごと」「内容ごと」に記録を確認出来ます。
+本の記録を効率化したくて作成したアプリです。  
+見出しと一緒に内容を記録することで、「本ごと」「内容ごと」に記録を確認出来ます。  
+![arcane-inlet-49890 herokuapp com_](https://user-images.githubusercontent.com/40508321/50552849-9cd5ac00-0cdf-11e9-93c4-84d7c7da216d.png)
 
 ## URL
 http://arcane-inlet-49890.herokuapp.com/
