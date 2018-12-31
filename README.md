@@ -25,4 +25,5 @@ http://arcane-inlet-49890.herokuapp.com/
 * 辞書機能
 * 一対多アソシエーション
 * 記録をすると自動的に、本ごと、見出しごとのメニューが重複無しで作成される機能
-* 画像をAWSのS3サーバにアップロードするよう設定（fog-aws使用）
+* 画像をAWSのS3サーバにアップロードするよう設定（fog-aws、dotenv-rails使用）
+* AWSブランチにおいてAWSへデプロイ（Capistrano、unicorn、therubyracer使用）
