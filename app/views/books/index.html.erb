@@ -13,6 +13,7 @@
         <th>タイトル</th>
         <th>見出し</th>
         <th>内容</th>
+        <th>更新日</th>
         <th>編集</th>
         <th>削除</th>
       </tr>
@@ -22,6 +23,7 @@
         <td><%= book.title %></td>
         <td><%= book.headline %></td>
         <td><%= book.content.truncate(10) %></td>
+        <td><%= book.updated_at %></td>
         <td><%= link_to "編集", edit_book_path(book.id) %></td>
         <td><%= link_to "削除", book_path(book.id),method: :delete,data: {confirm: "本当に削除していいですか？"} %></td>
       <% end %>
