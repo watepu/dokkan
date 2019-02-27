@@ -23,7 +23,7 @@
         <td><%= book.title %></td>
         <td><%= book.headline %></td>
         <td><%= book.content.truncate(10) %></td>
-        <td><%= book.updated_at %></td>
+        <td><%= book.updated_at.strftime("%Y/%m/%d") %></td>
         <td><%= link_to "編集", edit_book_path(book.id) %></td>
         <td><%= link_to "削除", book_path(book.id),method: :delete,data: {confirm: "本当に削除していいですか？"} %></td>
       <% end %>
