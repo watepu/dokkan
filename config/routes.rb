@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'home#top'
-  devise_for :users
+  devise_for :users, controllers: {
+    omniauth_callbacks: "users/omniauth_callbacks"
+  }
 
   get 'books/title/:title', to: 'books#title'
   get 'books/headline/:headline', to: 'books#headline'
